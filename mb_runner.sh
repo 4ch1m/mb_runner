@@ -194,8 +194,6 @@ function concat_params_for_package
 
 function run_mb_jar
 {
-    #echo "java -jar \"${MB_HOME}/bin/monkeybrains.jar\" ${PARAMS} \"${SOURCES}\""
-    #exit 1
     java -jar "${MB_HOME}/bin/monkeybrains.jar" ${PARAMS} ${SOURCES}
 }
 
