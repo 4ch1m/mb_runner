@@ -81,6 +81,6 @@ The script should be run with your project's root-directory as current working d
 
 Also the script expects your source-files to be in a folder called `source`, and your resources in folders named `resources*`.
 
-However this can be customized by passing your full project-root-path, the source-folder-name and the resources-folder-name as 2nd, 3rd, and 4th parameter respectively.
+However this can be customized by passing your full project-root-path, the resources-folder-name and the source-folder-name as 2nd, 3rd, and 4th parameter respectively.
 
 Have fun! :smile:
