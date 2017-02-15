@@ -1,7 +1,7 @@
 # mb_runner
 > A helper-script to enable ConnectIQ-development on UNIX-systems
 
-Due to the lack of a dedicated CIQ-SDK for Linux, this script aims to provide some basic austomated tasks to make developing CIQ-apps on UNIX-systems possible nevertheless.  
+Due to the lack of a dedicated CIQ-SDK for Linux, this script aims to provide some basic automated tasks to make developing CIQ-apps on UNIX-systems possible nevertheless.  
 
 Currently these tasks/features are available:
 * compiling (re)sources and building a PRG-file for testing
