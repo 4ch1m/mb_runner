@@ -174,6 +174,7 @@ function concat_params_for_build
     PARAMS+="--manifest \"${MANIFEST_FILE}\" "
     PARAMS+="--output \"${APP_NAME}.prg\" "
     PARAMS+="--project-info \"${PROJECT_INFO}\" "
+    PARAMS+="--sdk-version \"${TARGET_SDK_VERSION}\" "
     PARAMS+="--unit-test "
     PARAMS+="--devices \"${DEVICES}\" "
     PARAMS+="--warn "
