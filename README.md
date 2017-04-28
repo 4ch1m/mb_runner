@@ -78,9 +78,18 @@ For more details please see the comments in the script itself: [mb_runner.sh](mb
 
 #### Additional Notes
 The script should be run with your project's root-directory as current working directory.
-
 Also the script expects your source-files to be in a folder called `source`, and your resources in folders named `resources*`.
 
 However this can be customized by passing your full project-root-path, the resources-folder-name and the source-folder-name as 2nd, 3rd, and 4th parameter respectively.
+
+#### Technical Side Note
+* How to determine all available devices (listed in `mb_runner.cfg.sample`):
+  ```
+  grep "device id=" ${MB_HOME}/bin/devices.xml | sort
+  ```
+* How to determine target-SDK versions (listed in `mb_runner.cfg.sample`):
+  ```
+  grep "<version>" ${MB_HOME}/bin/compilerInfo.xml | tail -n +2
+  ```
 
 Have fun! :smile:
