@@ -1,14 +1,16 @@
 # mb_runner
 > A helper-script to enable ConnectIQ-development on UNIX-systems
 
-Due to the lack of a dedicated CIQ-SDK for Linux, this script aims to provide some basic automated tasks to make developing CIQ-apps on UNIX-systems possible nevertheless.  
+~~Due to the lack of a dedicated CIQ-SDK for Linux, this script aims to provide some basic automated tasks to make developing CIQ-apps on UNIX-systems possible nevertheless.~~  
+Originally this script was meant to mitigate the pain of not having a native CIQ-SDK for Linux.
+Although there is a Linux version of the SDK available now, this script can still be helpful for automated builds or if you don't want to use the Eclipse-CIQ-plugin for development.
 
-Currently these tasks/features are available:
+These features are available:
 * compiling (re)sources and building a PRG-file for testing
 * run unit-tests (requires a running simulator)
 * creating a signed IQ-file package for publishing
 * cleaning up previously built files
-* starting the ConnectIQ-simulator (using wine)
+* starting the ConnectIQ-simulator
 * pushing the generated PRG-file to the running simulator
 
 There are two ways to utilize this script:
@@ -20,6 +22,7 @@ There are two ways to utilize this script:
   ```
    .
    ├── manifest.xml
+   ├── monkey.jungle
    ├── mb_runner.sh
    ├── mb_runner.cfg
    ├── resources
@@ -50,6 +53,7 @@ There are two ways to utilize this script:
   ```
    .
    ├── manifest.xml
+   ├── monkey.jungle
    ├── mb_runner
    │   ├── mb_runner.cfg.sample
    │   ├── mb_runner.sh
@@ -78,9 +82,22 @@ For more details please see the comments in the script itself: [mb_runner.sh](mb
 
 #### Additional Notes
 The script should be run with your project's root-directory as current working directory.
-Also the script expects your source-files to be in a folder called `source`, and your resources in folders named `resources*`.
 
-However this can be customized by passing your full project-root-path, the resources-folder-name and the source-folder-name as 2nd, 3rd, and 4th parameter respectively.
+~~Also the script expects your source-files to be in a folder called `source`, and your resources in folders named `resources*`.~~
+
+~~However this can be customized by passing your full project-root-path, the resources-folder-name and the source-folder-name as 2nd, 3rd, and 4th parameter respectively.~~
+
+With the introduction of **jungle.files** you don't need to manually specify your (re)sources for compilation anymore.
+(However, the script still accepts your (re)source-folder(s) as parameter(s) to provide compatibility for legacy-projects.)
+
+If you have more than one **jungle.file**, you can override/add more within the config-file; e.g.:
+```
+JUNGLE_FILES="${PROJECT_HOME}/monkey.jungle "
+JUNGLE_FILES+="${PROJECT_HOME}/directory1/monkey.jungle "
+JUNGLE_FILES+="${PROJECT_HOME}/directory2/monkey.jungle "
+JUNGLE_FILES+="${PROJECT_HOME}/directory3/monkey.jungle "
+...
+```
 
 #### Technical Side Note
 * How to determine all available devices (listed in `mb_runner.cfg.sample`):
