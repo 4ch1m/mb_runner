@@ -102,7 +102,7 @@ JUNGLE_FILES+="${PROJECT_HOME}/directory3/monkey.jungle "
 #### Technical Side Note
 * How to determine all available devices (listed in `mb_runner.cfg.sample`):
   ```
-  grep "device id=" ${MB_HOME}/bin/devices.xml | sort
+  grep "device family=" ${MB_HOME}/bin/devices.xml | sort
   ```
 * How to determine target-SDK versions (listed in `mb_runner.cfg.sample`):
   ```
